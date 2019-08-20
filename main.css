@@ -4,10 +4,12 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #1B2B42;
+  color: white
 }
 
 main{
-  background-color: beige;
+/*   background-color: beige; */
   padding: 20px;
 }
 
@@ -28,6 +30,24 @@ label{
 form > p {
   justify-self: end;
   margin: 4px;
+}
+
+input[placeholder]{
+  border: none;
+  background-color: #1B2B42;
+  border-bottom: 3px solid #144365;
+  color: white;
+  padding: 2px 5px;
+}
+
+input[placeholder]:focus{
+  background-color: #1d669a;
+  outline: dotted white;
+}
+
+input::placeholder{
+  color: white;
+  font-style: italic;
 }
 
 label.checkbox, label.radio{
