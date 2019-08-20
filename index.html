@@ -5,66 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Survey Form</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <h1 id="title">Survey Form</h1>
-  <form action="" id="survey-form">
+  <main>
+
     <p id="description">Let us know why we need hire you</p>
+    <form action="" id="survey-form">
+  
+      <label for="name" id="name-label">*Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+  
+      <label for="email" id="email-label">*Email:</label>
+      <input type="email" id="email" placeholder="Enter your Email" required>
+      
+      <label for="number" id="number-label">How much do you stipulate to earn for the project? </label>
+      <input type="number" id="number" min="100" max="1000" step="10" placeholder="$100 ~ $1000">
+  
+      <label for="dropdown">What is your willingness to work?</label>
+      <select name="" id="dropdown">
+        <option value="Full-time">Full-time</option>
+        <option value="Part-time">Part-time</option>
+        <option value="Part-time">Remote</option>
+      </select>
+      <!-- <br/> -->
+  
+      <p>Which position are you appliyin?</p>
+      <label for="frontend" class="checkbox">
+          Front-end
+          <input type="checkbox" id="frontend" name="position" value="front-end">
+      </label>
+      <label for="backend" class="checkbox">
+          Back-end
+          <input type="checkbox" id="backend" name="position" value="back-end">
+      </label>
+      <label for="devops" class="checkbox">
+        DevOps
+        <input type="checkbox" id="devops" name="position" value="devops">
+      </label>
+      <label for="android" class="checkbox">
+        Android
+        <input type="checkbox" id="android" name="position" value="android">
+      </label>
+      <label for="ios" class="checkbox">
+        iOs
+        <input type="checkbox" id="ios" name="position" value="ios">
+      </label>
 
-    <label for="name" id="name-label">*Name:</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
-    <br/>
-
-    <label for="email" id="email-label">*Email:</label>
-    <input type="email" id="email" placeholder="Enter your Email" required>
-    <br/>
-    
-    <label for="number" id="number-label">How much do you stipulate to earn for the project? </label>
-    <input type="number" id="number" min="100" max="1000" step="10" placeholder="$100 ~ $1000">
-    <br/>
-
-    <label for="dropdown">What is your willingness to work?</label>
-    <select name="" id="dropdown">
-      <option value="Full-time">Full-time</option>
-      <option value="Part-time">Part-time</option>
-      <option value="Part-time">Remote</option>
-    </select>
-    <br/>
-
-    <p>Which position are you appliyin?</p>
-    <input type="checkbox" id="frontend" name="position" value="front-end">
-    <label for="frontend">Front-end</label>
-    <input type="checkbox" id="backend" name="position" value="back-end">
-    <label for="backend">Back-end</label>
-    <input type="checkbox" id="devops" name="position" value="devops">
-    <label for="devops">DevOps</label>
-    <input type="checkbox" id="android" name="position" value="android">
-    <label for="android">Android</label>
-    <input type="checkbox" id="ios" name="position" value="ios">
-    <label for="ios">iOs</label>
-    <br/>
-
-    <p>How many projects have you work before?</p>
-    <input type="radio" id="one" name="experience" value="one">
-    <label for="one">One Projects</label>
-    <input type="radio" id="two" name="experience" value="two">
-    <label for="two">Two projects</label>
-    <input type="radio" id="three" name="experience" value="three">
-    <label for="three">Three projects</label>
-    <input type="radio" id="four" name="experience" value="four">
-    <label for="four">Four projects</label>
-    <input type="radio" id="five" name="experience" value="five">
-    <label for="five">Five projects</label>
-    <input type="radio" id="more" name="experience" value="more">
-    <label for="more">More than five projects</label>
-    <br/>
-
-    <label for="textarea">Tell us why you want to work with us</label>
-    <textarea name="reasons" id="textarea" cols="30" rows="5" placeholder="Enter your reasons here..."></textarea>
-    <br/>
-
-    <button type="submit" id="submit">Send the form</button>
-  </form>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      <p>How many projects have you work before?</p>
+      <input type="radio" id="one" name="experience" value="one">
+      <label for="one">One Projects</label>
+      <input type="radio" id="two" name="experience" value="two">
+      <label for="two">Two projects</label>
+      <input type="radio" id="three" name="experience" value="three">
+      <label for="three">Three projects</label>
+      <input type="radio" id="four" name="experience" value="four">
+      <label for="four">Four projects</label>
+      <input type="radio" id="five" name="experience" value="five">
+      <label for="five">Five projects</label>
+      <input type="radio" id="more" name="experience" value="more">
+      <label for="more">More than five projects</label>
+  
+      <label for="textarea">Tell us why you want to work with us</label>
+      <textarea name="reasons" id="textarea" cols="30" rows="5" placeholder="Enter your reasons here..."></textarea>
+  
+      <button type="submit" id="submit">Send the form</button>
+    </form>
+  </main>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 </html>
