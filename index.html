@@ -29,6 +29,35 @@
         <option value="Part-time">Part-time</option>
         <option value="Part-time">Remote</option>
       </select>
+
+      <!-- This is to show the custom widget according the design -->
+      <div class="select" tabindex="0">
+        <!-- here is the selected value of the widget -->
+        <span class="value">Full-time</span>
+        <!-- the dropdown arrow -->
+        <svg viewBox="0 0 300 300" class="dropdown-arrow" 
+          width="15px" height="12px" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="myGradient"">
+              <stop offset="0%"  stop-color="#144365" />
+              <stop offset="76.56%" stop-color="#5AF8F4" />
+            </linearGradient>
+            <linearGradient id="reverseGradient"">
+              <stop offset="0%"  stop-color="#5AF8F4" />
+              <stop offset="76.56%" stop-color="#144365" />
+            </linearGradient>
+          </defs>
+          <line fill="none" x1="10" y1="0" x2="155" y2="300" stroke="url('#myGradient')" stroke-width="40px"/>
+          <line fill="none" x1="147" y1="300" x2="285" y2="0" stroke="url('#reverseGradient')" stroke-width="40px"/>
+        </svg>
+        <ul class="optList">
+          <li class="option highlight">Full-time</li>
+          <li class="option">Part-time</li>
+          <li class="option">Remote</li>
+        </ul>
+      </div>
   
       <p>Which position are you appliyin?</p>
       <label for="frontend" class="checkbox">

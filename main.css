@@ -9,7 +9,6 @@ body{
 }
 
 main{
-/*   background-color: beige; */
   padding: 20px;
 }
 
@@ -67,4 +66,73 @@ button {
  color: red;
  grid-column: span 2;
  justify-self: center; 
+}
+
+/* here come the styles of custom widget */
+select{
+  display: none;
+}
+
+.select{
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  box-sizing: border-box;
+  padding : .1em 1.5em .2em .5em;
+  width: 7em;
+  border-bottom: .2em solid #144365;
+}
+
+.select .active, .select:focus{
+  outline: none;
+  box-shadow: 0 0 3px 3px white;
+}
+
+.select .value{
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  vertical-align: top;
+  /* in case that the contet overflows */
+  white-space: nowarp;
+  text-overflow: ellipsis;
+}
+
+svg.dropdown-arrow{
+  position: absolute;
+  top: 20%;
+  right: 5px;
+  z-index: 1;
+}
+
+.select .optList{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 100%;
+  max-height: 10em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #1B2B42;
+  color: white;
+  box-shadow: 0 0 .2em .2em white;
+}
+
+.select .optList.hidden{
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select .option{
+  padding: .2em .3em
+}
+
+.select .highlight {
+  background: white;
+  color: #1B2B42;
 }
