@@ -1,6 +1,7 @@
 const $dropdown = document.querySelector('.select')
 const $dropdownList = document.querySelector('ul.optList')
 const $listElements = document.querySelectorAll('.option')
+const $nativeSelect = document.querySelector('select')
 
 $dropdown.addEventListener('click', toggleDropdown)
 
@@ -10,42 +11,40 @@ function toggleDropdown () {
 }
 
 
-$listElements.forEach( function (listEl) {
-  listEl.addEventListener('click', selectElement)
+$listElements.forEach( function (listEl, index) {
+  listEl.addEventListener('click', function(ev) {
+    updateValue(listEl, index)
+  })
+
+  listEl.addEventListener('mouseover', highlight)
 })
 
-// lets change the text of the span
-// the element selected from the list
-function selectElement (listEl) {
+// this function update the value displayed of the custom widget and
+// synchronizes with the native widget
+function updateValue (listEl, index) {
   const elementSelected = document.querySelector('span.value')
-  elementSelected.innerHTML = listEl.target.innerHTML
-  listEl.target.classList.add('highlight')
+  elementSelected.innerHTML = listEl.innerHTML
+  listEl.classList.add('highlight')
+  $nativeSelect.selectedIndex = index
 }
 
 // to remove any highlight class
 // and highlight the element selected 
-function highlight (option) {
+function highlight (listEl) {
   $listElements.forEach(clearHighlight)
-
-  option.target.classList.add('highlight')
+  listEl.target.classList.add('highlight')
 }
 
 function clearHighlight (listEl) {
   listEl.classList.remove('highlight')
 }
 
-$listElements.forEach( function (option) {
-  option.addEventListener('mouseover', highlight)
-})
-
 // if the list is displayed and we click outside out it,
 // the list must close it due unfocus event
-// function deactiveDropdown(dropdown){
-//   if (document.)
-// }
-
-$dropdown.addEventListener('blur', function(){
+function deactiveDropdown(dropdown){
   if ($dropdownList.classList.contains('hidden')) return
-
+  
   $dropdownList.classList.add('hidden')
-})
+}
+
+$dropdown.addEventListener('blur', deactiveDropdown)

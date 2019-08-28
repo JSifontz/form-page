@@ -136,7 +136,8 @@ button {
 
 /* here come the styles of custom widget */
 select{
-  display: none;
+  position: absolute;
+  left: -5000em;
 }
 
 .select{
