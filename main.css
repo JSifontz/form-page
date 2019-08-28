@@ -60,7 +60,12 @@ input[type="checkbox"], input[type="radio"]{
   position: absolute;
   top:0;
   left: 0;
-  display: none;
+  opacity: 0;
+}
+
+input[type="checkbox"]:focus + .checkmark,
+input[type="radio"]:focus + .checkmark{
+  border: 2px dotted #1d669a;
 }
 
 label.checkbox > .checkmark{
