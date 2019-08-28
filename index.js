@@ -3,21 +3,10 @@ const $dropdownList = document.querySelector('ul.optList')
 const $listElements = document.querySelectorAll('.option')
 const $nativeSelect = document.querySelector('select')
 
-$dropdown.addEventListener('click', toggleDropdown)
-
 // this will show or hide the list
 function toggleDropdown () {
   $dropdownList.classList.toggle('hidden')
 }
-
-
-$listElements.forEach( function (listEl, index) {
-  listEl.addEventListener('click', function(ev) {
-    updateValue(listEl, index)
-  })
-
-  listEl.addEventListener('mouseover', highlight)
-})
 
 // this function update the value displayed of the custom widget and
 // synchronizes with the native widget
@@ -48,3 +37,12 @@ function deactiveDropdown(dropdown){
 }
 
 $dropdown.addEventListener('blur', deactiveDropdown)
+$dropdown.addEventListener('click', toggleDropdown)
+
+$listElements.forEach( function (listEl, index) {
+  listEl.addEventListener('click', function(ev) {
+    updateValue(listEl, index)
+  })
+
+  listEl.addEventListener('mouseover', highlight)
+})
