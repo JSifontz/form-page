@@ -1,15 +1,20 @@
+html{
+  height: 100%;
+}
+
 body{
+  height: 100%;
   margin: 0;
-  /* text-align: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #1B2B42;
-  color: white
+  color: white;
 }
 
 main{
   padding: 20px;
+  flex: 1 0 auto;
 }
 
 p{
@@ -132,6 +137,36 @@ button {
  color: red;
  grid-column: span 2;
  justify-self: center; 
+}
+
+footer{
+  background: linear-gradient(180deg, #2A5694 0%, #1BDFCE 100%);
+  width: 100%;
+  box-sizing: border-box;
+  height: 5em;
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-shrink: 0;
+}
+
+footer > p {
+  margin: .5em 0;
+  font-weight: bold;
+}
+
+footer > p a:link {
+  text-decoration: underline overline wavy pink;
+  color: purple;
+}
+
+footer > p a:visited{
+  color: #4f1c57;
+  text-decoration-color: pink
+}
+
+footer > p a:hover{
+  color: yellow;
 }
 
 /* here come the styles of custom widget */
