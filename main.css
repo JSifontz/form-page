@@ -70,7 +70,7 @@ input[type="checkbox"], input[type="radio"]{
 
 input[type="checkbox"]:focus + .checkmark,
 input[type="radio"]:focus + .checkmark{
-  border: 2px dotted #1d669a;
+  outline: 2px #1BDFCE dashed;
 }
 
 label.checkbox > .checkmark{
@@ -131,6 +131,10 @@ label.radio .checkmark:after {
   height: .5em;
   border-radius: 50%;
   background-color: #1B2B42;
+}
+
+textarea:focus{
+  outline: dashed #1BDFCE;
 }
 
 button {
