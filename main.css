@@ -157,6 +157,7 @@ button {
  font-size: 1em;
  transition: .5s;
  box-shadow: .375em .19em .5em #266C7E;
+ cursor: pointer;
 }
 
 button:active{
@@ -165,6 +166,10 @@ button:active{
 
 button:focus{
   outline: dotted white;
+}
+
+button:hover{
+  background-color: rgb(144, 195, 207);
 }
 
 footer{
