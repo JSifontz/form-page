@@ -10,6 +10,7 @@ body{
   align-items: center;
   background-color: #1B2B42;
   color: white;
+  font-family: 'PT Sans', sans-serif;
 }
 
 main{
@@ -154,7 +155,8 @@ button {
  height: 2.44em;
  background-color: #B1EFFF;
  font-weight: bold;
- font-size: 1em;
+ font-size: 1.1em;
+ font-family: 'PT Sans', sans-serif;
  transition: .5s;
  box-shadow: .375em .19em .5em #266C7E;
  cursor: pointer;
@@ -291,25 +293,45 @@ svg.background-bot{
 }
 
 @media screen and (max-width: 510px){
+  h1{
+    font-size: 2.8em;
+  }
+
+  #description{
+    font-size: 1.1em;
+  }
+
   form{
     grid-template-columns: 1fr;
     grid-template-rows: repeat(15, 1r);
     justify-items: center;
     align-items: center;
+    font-size: 1.1em;
   }
   label, input, textarea, button, .select, .inp-container{
     grid-row: span 1;
     grid-column: 1 / 1;
     justify-self: center;
   }
+
   #number-label {
     text-align: center;
   }
+
   .inp-container{
     flex-direction: column;
   }
+
   label.checkbox, label.radio{
     place-self: start;
     margin: .3em 0;
+  }
+
+  svg.dropdown-arrow{
+    top: 30%;
+  }
+
+  footer{
+    font-size: 1.2em;
   }
 }
