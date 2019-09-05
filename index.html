@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
+  <svg viewBox="0 0 500 150" class="background-top"
+    width="500px" height="150px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+  
+    <path d="M 0 35 C 250 150, 275 70, 375 0 L0 0 Z" stroke="none" fill="azure"/>
+  </svg>
   <h1 id="title">Survey Form</h1>
   <main>
 
@@ -129,6 +136,18 @@
       <button type="submit" id="submit">Send the form</button>
     </form>
   </main>
+  <svg viewBox="0 0 500 100" class="background-bot"
+    width="500px" height="100px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="botGradient" gradientTransform="rotate(90)">
+        <stop offset="0%" stop-color="#E0413E"/>
+        <stop offset="97.2%" stop-color="#EDA780"/>
+      </linearGradient>
+    </defs>
+    <path d="M 100 100 Q 270 20, 500 0 L500 100 Z" stroke="none" fill="url('#botGradient')"/>
+  </svg>
   <footer>
     <p>💻 by <a href="http://twitter.com/Jsifontez_" target="_blank" rel="noopener noreferrer">@Jsifontez</a></p>
     <p>Design by <a href="http://behance.net/darkhost" target="_blank" rel="noopener noreferrer">Ginner Zapata</a></p>

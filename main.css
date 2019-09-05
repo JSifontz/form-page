@@ -271,3 +271,15 @@ svg.dropdown-arrow{
   background: white;
   color: #1B2B42;
 }
+
+svg.background-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+svg.background-bot{
+  min-height: 100px;
+  align-self: flex-end;
+}
